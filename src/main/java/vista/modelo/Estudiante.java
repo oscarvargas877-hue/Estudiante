@@ -9,16 +9,33 @@ package vista.modelo;
  * @author Usuario
  */
 public class Estudiante {
+    private static int idEstudiante=100;
+    private final int id;
     private String nombre;
     private String edad;
     private String correo;
     private boolean genero;
+    private static String carrera= "Tecnologia Superior en desarrollo de software";
 
-    public Estudiante(String nombre, String edad ,String correo, boolean genero) {
+    
+    public static String getCarrera() {
+        return carrera;
+    }
+
+    public Estudiante() {
+        this.id=idEstudiante ++;
+        getCarrera();
+    }
+    
+    
+
+    public Estudiante( String nombre, String edad ,String correo, boolean genero) {
+        this.id=idEstudiante++;
         this.nombre = nombre;
         this.edad = edad;
         this.correo=correo;
         this.genero=genero;
+        
     }
     
     //metodos
@@ -54,6 +71,21 @@ public class Estudiante {
     public void setGenero(boolean genero) {
         this.genero = genero;
     }
+
+    public static int getIdEstudiante() {
+        return idEstudiante;
+    }
+
+    public boolean isGenero() {
+        return genero;
+    }
+    // Método para obtener el ID del estudiante
+    public int getId() {
+        return id;
+    }
+
+    
+    
     // metodo de logica
     //validar el genero
     public String ValidarGenero(){
@@ -64,6 +96,7 @@ public class Estudiante {
         }
     }
     
+    
 
     
     //Imprimir en pantalla
@@ -71,9 +104,11 @@ public class Estudiante {
     @Override
     public String toString() {
         return "Datos del estudiante" +"\n"+
+                "Id estudiante: " + id+"\n"+
                 "Nombre: " + nombre+"\n"+
                 "Edad: " + edad +"\n"+
                 "Correo: "+ correo +"\n"+
+                "Carrera: "+ carrera +"\n"+
                 "Género: " +  ValidarGenero();
     }
     
