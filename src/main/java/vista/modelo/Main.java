@@ -10,8 +10,12 @@ package vista.modelo;
  */
 public class Main {
     public static void main(String[] args) {
-        Estudiante e= new Estudiante("Oscar", "23", "oscar@gmail.com");
-        e.imprimir();
+    Persona persona1 = new Persona("Lucas","soltero", true);
+        System.out.println(persona1.toString());
+        System.out.println("\n");
+        
+    Estudiante estudiante1 = new Estudiante("Marco","20","ma@gmail.com",true);
+        System.out.println(estudiante1.toString());
     }
     
 }

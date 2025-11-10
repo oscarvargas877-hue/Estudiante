@@ -8,21 +8,22 @@ package vista.modelo;
  *
  * @author Usuario
  */
-public class Estudiante {
+public class Persona {
+    //Atributos
     private String nombre;
-    private String edad;
-    private String correo;
+    private String estadoCivil;
     private boolean genero;
-
-    public Estudiante(String nombre, String edad ,String correo, boolean genero) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.correo=correo;
-        this.genero=genero;
-    }
     
-    //metodos
-
+//constructor vacio
+    public Persona() {
+    }
+//constructor completo
+    public Persona(String nombre, String estadoCivil, boolean genero) {
+        this.nombre = nombre;
+        this.estadoCivil = estadoCivil;
+        this.genero = genero;
+    }
+//metodos set y get
     public String getNombre() {
         return nombre;
     }
@@ -31,20 +32,12 @@ public class Estudiante {
         this.nombre = nombre;
     }
 
-    public String getEdad() {
-        return edad;
+    public String getEstadoCivil() {
+        return estadoCivil;
     }
 
-    public void setEdad(String edad) {
-        this.edad = edad;
-    }
-
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
+    public void setEstadoCivil(String estadoCivil) {
+        this.estadoCivil = estadoCivil;
     }
 
     public boolean getGenero() {
@@ -62,20 +55,19 @@ public class Estudiante {
         }else{
             return "Femenino";
         }
+    
     }
-    
 
-    
-    //Imprimir en pantalla
+    //imprimir en pantalla
 
     @Override
     public String toString() {
-        return "Datos del estudiante" +"\n"+
-                "Nombre: " + nombre+"\n"+
-                "Edad: " + edad +"\n"+
-                "Correo: "+ correo +"\n"+
-                "Género: " +  ValidarGenero();
+        return "Datos Personales" + "\n "+
+                "nombre: "+ nombre + "\n "+
+                "Estado Civil: " + estadoCivil+ "\n "+
+                "Genero: "+ ValidarGenero();
     }
+    
     
     
     
