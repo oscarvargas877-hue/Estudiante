@@ -238,7 +238,7 @@ public class EstudianteVista extends javax.swing.JFrame {
                             .addComponent(jScrollPane3))))
                 .addContainerGap(472, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(612, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(330, 330, 330))
         );
@@ -255,7 +255,7 @@ public class EstudianteVista extends javax.swing.JFrame {
                         .addComponent(lblDatos)
                         .addGap(14, 14, 14)
                         .addComponent(lblNombre)
-                        .addGap(18, 18, 18)
+                        .addGap(24, 24, 24)
                         .addComponent(lblEdad)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -276,7 +276,7 @@ public class EstudianteVista extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
-                .addContainerGap(202, Short.MAX_VALUE))
+                .addContainerGap(196, Short.MAX_VALUE))
         );
 
         pack();
